@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Customer Prediction</title>
+    <style>
+        /* CSS styles */
+        body {
+            background-color: burlywood;
+        }
+        h2,h5{
+            text-align: center;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: hsla(204, 56%, 31%, 0.165);
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea,
+        .form-container select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #337ab7;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #4b7c23;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv" class="form-container">
+        <form method = "POST" action="" >
+        {{form.hidden_tag()}}
+        <h2>INPUT CUSTOMER DETAILS</h2><br>
+
+
+        {{ form.gender.label }}
+        {{ form.gender(class="form-control") }}<br>
+
+        {{ form.seniorcit.label }}
+        {{ form.seniorcit(class="form-control") }}<br>
+        
+        {{ form.partner.label }}
+        {{ form.partner(class="form-control") }}<br>
+
+        {{ form.tenure.label }}
+        {{ form.tenure(class="form-control") }}<br>
+
+        {{ form.dependents.label }}
+        {{ form.dependents(class="form-control") }}<br>
+
+        {{ form.phoneserv.label }}
+        {{ form.phoneserv(class="form-control") }}<br>
+
+        {{ form.papperlessbill.label }}
+        {{ form.papperlessbill(class="form-control") }}<br>
+
+        {{ form.mutiplelines.label }}
+        {{ form.mutiplelines(class="form-control") }}<br>
+
+        {{ form.internetserv.label }}
+        {{ form.internetserv(class="form-control") }}<br>
+
+        {{ form.onlinesecurity.label }}
+        {{ form.onlinesecurity(class="form-control") }}<br>
+
+        {{ form.onlinebackup.label }}
+        {{ form.onlinebackup(class="form-control") }}<br>
+
+        {{ form.deviceprotect.label }}
+        {{ form.deviceprotect(class="form-control") }}<br>
+
+        {{ form.techsupport.label }}
+        {{ form.techsupport(class="form-control") }}<br>
+
+        {{ form.streamingtv.label }}
+        {{ form.streamingtv(class="form-control") }}<br>
+
+        {{ form.streammov.label }}
+        {{ form.streammov(class="form-control") }}<br>
+
+        {{ form.contract.label }}
+        {{ form.contract(class="form-control") }}<br>
+
+        {{ form.paymentmethod.label }}
+        {{ form.paymentmethod(class="form-control") }}<br>
+
+        {{ form.monthsub.label }}
+        {{ form.monthsub(class="form-control") }}<br>
+
+        {{ form.totalsub.label }}
+        {{ form.totalsub(class="form-control") }}<br><br>
+
+        {{ form.submit(class="btn btn-primary") }}
+        </form>
+
+    </div>
+    
+    
+</body>
+</html>
